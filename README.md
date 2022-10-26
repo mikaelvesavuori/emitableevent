@@ -8,7 +8,7 @@
 
 [![codecov](https://codecov.io/gh/mikaelvesavuori/emittableevent/branch/main/graph/badge.svg?token=S7D3RM9TO7)](https://codecov.io/gh/mikaelvesavuori/emittableevent)
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/15a30d2b3f679507fdd0/maintainability)](https://codeclimate.com/github/mikaelvesavuori/emittableevent/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/b65ba911cad077660f9c/maintainability)](https://codeclimate.com/github/mikaelvesavuori/emittableevent/maintainability)
 
 ---
 
