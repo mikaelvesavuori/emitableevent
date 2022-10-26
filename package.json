@@ -1,7 +1,7 @@
 {
   "name": "emittableevent",
   "description": "EmittableEvent is an opinionated abstraction class for generating rich EventBridge events.",
-  "version": "0.0.6",
+  "version": "1.0.0",
   "author": "Mikael Vesavuori",
   "license": "MIT",
   "main": "./lib/index.js",
