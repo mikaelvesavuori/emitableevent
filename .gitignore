@@ -1,0 +1,11 @@
+.dccache
+.env
+.serverless/
+.webpack/
+node_modules/
+coverage/
+jest-coverage/
+demos/
+lib/
+build/
+*.tgz
