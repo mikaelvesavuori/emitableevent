@@ -67,7 +67,7 @@ const eventInput = {
 };
 
 // Create the event
-const myEvent = new MyEvent(eventInput, requestContext);
+const myEvent = new MyEvent(eventInput, awsRequestContext);
 ```
 
 Another benefit of this approach is that you can now "type" your events rather than pass around dumb data blobs.
