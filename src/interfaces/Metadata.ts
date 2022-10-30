@@ -34,11 +34,13 @@ export type StaticMetadata = {
    */
   team: string;
   /**
-   * @description The type of event. Must be one of:
+   * @description The type of event.
+   *
+   * **Must be one of:**
    * - `DomainEvent` for events occurring within the domain
    * - `IntegrationEvent` when crossing domain boundaries
    */
-  eventType: 'DomainEvent' | 'IntegrationEvent';
+  eventType: EventType;
   /**
    * @description Platform that hosts the solution that emitted this event.
    *
@@ -152,11 +154,16 @@ export type Metadata = MetadataConfigInput &
   };
 
 /**
+ * @description Valid event types.
+ */
+export type EventType = 'DomainEvent' | 'IntegrationEvent';
+
+/**
  * @description Valid data sensitivity levels.
  */
-type DataSensitivity = 'public' | 'sensitive' | 'proprietary' | 'secret';
+export type DataSensitivity = 'public' | 'sensitive' | 'proprietary' | 'secret';
 
 /**
  * @description The overall jurisdiction (legal region) for this service.
  */
-type Jurisdiction = 'eu' | 'us' | 'cn' | 'apj';
+export type Jurisdiction = 'eu' | 'us' | 'cn' | 'apj';

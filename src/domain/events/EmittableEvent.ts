@@ -88,6 +88,7 @@ export abstract class EmittableEvent {
     return {
       ...this.metadataConfig,
       eventName,
+      eventType: metadata.eventType,
       timestamp: `${timeNow}`,
       timestampHuman: new Date(timeNow).toISOString(),
       requestTimeEpoch: requestContext.requestTimeEpoch,

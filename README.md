@@ -42,17 +42,21 @@ class MyEvent extends EmittableEvent {
 
 // Convenience utility to produce required static metadata
 // Can of course be a static metadata JSON as well!
-const getMetadataConfig = (version = 1) => {
+const getMetadataConfig = (
+  version = 1,
+  eventType: any = 'DomainEvent',
+  jurisdiction: any = 'eu'
+): MetadataConfigInput => {
   return {
     version,
-    eventType: 'DomainEvent' as any, // These have hard types internally
+    eventType,
     domain: 'MyDomain',
     system: 'MySystem',
     service: 'MyService',
     team: 'MyTeam',
     hostPlatform: 'aws',
     owner: 'Sam Person',
-    jurisdiction: 'eu' as any // These have hard types internally
+    jurisdiction
   };
 };
 

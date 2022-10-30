@@ -2,7 +2,7 @@ import test from 'ava';
 
 import { EmittableEvent } from '../src/domain/events/EmittableEvent';
 
-import { MetadataConfigInput } from '../src/interfaces/Metadata';
+import { EventType, Jurisdiction, MetadataConfigInput } from '../src/interfaces/Metadata';
 
 import awsRequest from '../testdata/AwsRequest.json';
 
@@ -19,17 +19,21 @@ class CreatedEvent extends EmittableEvent {
  * @description Retrieve static or "known" metadata as a configuration
  * so we can create new events correctly.
  */
-const getMetadataConfig = (version = 1): MetadataConfigInput => {
+const getMetadataConfig = (
+  version = 1,
+  eventType: EventType = 'DomainEvent',
+  jurisdiction: Jurisdiction = 'eu'
+): MetadataConfigInput => {
   return {
     version,
-    eventType: 'DomainEvent',
+    eventType,
     domain: 'MyDomain',
     system: 'MySystem',
     service: 'MyService',
     team: 'MyTeam',
     hostPlatform: 'aws',
     owner: 'Sam Person',
-    jurisdiction: 'eu'
+    jurisdiction
   };
 };
 
